@@ -85,12 +85,10 @@ namespace ClientServerUsingNamedPipes.Server
 
         public Task<TaskResult> SendMessage(string message) {
             var taskCompletionSource = new TaskCompletionSource<TaskResult>();
-            var success = true;
             foreach (var server in _servers.Values) {
                 if (server.IsConnected) {
                     try {
-                        var result = server.SendMessage(message);
-                        if (success) success = result.Result.IsSuccess;
+                        server.SendMessage(message);
                     } catch (Exception e) {
                         Console.WriteLine(e);
                         throw;
