@@ -11,7 +11,6 @@
     <AssemblyName>ClientServerUsingNamedPipes</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
     <LangVersion>10</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -32,23 +31,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Utilities\EventHandlerExtensions.cs" />
-    <Compile Include="Interfaces\ICommunication.cs" />
-    <Compile Include="Interfaces\ICommunicationClient.cs" />
-    <Compile Include="Interfaces\ICommunicationServer.cs" />
-    <Compile Include="Client\PipeClient.cs" />
-    <Compile Include="Server\InternalPipeServer.cs" />
-    <Compile Include="Server\PipeServer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Logger.cs" />
-    <Compile Include="Utilities\TaskResult.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
